@@ -10,6 +10,8 @@
         <div class="block-header">
             <h2>DASHBOARD</h2>
         <h2 class="btn btn-outline-secondary"> <a href="{{route('createReport')}}"> Create Report</a> </h2>
+        <h2 class="btn btn-outline-secondary"> <a href="{{route('viewReport')}}"> View Report</a> </h2>
+
         </div>
 
 

@@ -22,8 +22,8 @@ Route::get('/','FrontController@index')->name('index');
 Route::get('/report/{company_id}','ReportController@report')->name('report');
 Route::get('/createReport','ReportController@createReport')->name('createReport');
 Route::post('/insertReport','ReportController@insertReport')->name('insertReport');
-
-
+Route::get('/viewReport','ReportController@viewReport')->name('viewReport');
+Route::get('/deleteReport/{company_id}','ReportController@deleteReport')->name('deleteReport');
 Route::get('/photo/{company_id}','PhotoController@index')->name('photo');
 Route::post('/insertPhoto','PhotoController@insertPhoto')->name('insertPhoto');
 Route::get('/deletePhoto/{id}','PhotoController@deletePhoto')->name('deletePhoto');
@@ -34,5 +34,6 @@ Route::get('/secutity','SelectController@security')->name('secutity');
 Route::get('/types/{slug}/{company_id}','TypeController@types')->name('types');
 Route::post('/insertAssessment','AssessmentController@insertAssessment')->name('insertAssessment');
 
-Route::get('dashboard', 'BackController@view')->name('dashboard');
+Route::get('/dashboard', 'BackController@view')->name('dashboard');
+Route::get('/chart','ResultChartController@index')->name('chart');
 

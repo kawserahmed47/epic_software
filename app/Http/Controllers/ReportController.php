@@ -5,6 +5,8 @@ use App\Report;
 use App\Type;
 use DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+
 
 class ReportController extends Controller
 {
@@ -82,5 +84,20 @@ class ReportController extends Controller
        $data->save();
        return redirect()->back();
 
+    }
+
+    public function viewReport(){
+        $data = array();
+        $data['reports']= Report::all();
+        return view('admin.viewReport',$data);
+    }
+
+    public function deleteReport($company_id){
+         $query = DB::table('reports')->where('id',$company_id)->delete();
+         if($query){
+             Session::flash('message', 'Report Deleted Successful');
+             return redirect()->back();
+         }
+       
     }
 }

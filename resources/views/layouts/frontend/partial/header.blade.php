@@ -31,7 +31,7 @@
 <nav class="navbar navbar-light navbar-expand-lg "
     uk-sticky="top: 200; animation: uk-animation-slide-top; bottom:    #sticky-on-scroll-up">
         <div class="container">
-            <a href="" class="navbar-brand">
+        <a href="{{route('dashboard')}}" class="navbar-brand">
                 <img src="{{ asset('/') }}public/assets/frontend/image/logo.png" alt="m" class="img-fluid" width="50"
                     height="100" style="width: 100px; height: 30px;">
             </a>
